@@ -55,7 +55,22 @@ Lấy từ `02_error_list_v1` (gom theo mã lỗi). Cột "ai sửa": **máy** (
 4. **Ngưỡng cấu hình không được đọc đúng**: `label_format.py:43-49,62-67` thiếu alias cho `min_box_px`, `max_box_frac`, `dup_box_iou` (`configs/pipeline.yaml:17-19`), nên thực tế dùng `huge_area = 0.9` và `dup_iou = 0.8` thay vì `0.95` / `0.9` khai báo. Cảnh báo vì thế có thể lệch ngay cả khi pipeline “sạch”. Nói cách khác, gate chỉ chặn tín hiệu mà checker phát ra; checker im lặng thì không có tín hiệu để chặn.
 
 ## 5. Train: raw vs clean (tùy chọn, chấm riêng)
-**Chưa chạy.** `submission/results/` chỉ có `.gitkeep`: không có `comparison.md`, không có file `*_seed*.json`, không có trọng số hay thư mục `runs/`. `notebooks/day09_train_compare.ipynb` còn `execution_count: null`, `outputs: []` và `REPO_URL` vẫn là placeholder. Vì không có kết quả train nên không có mAP50 để so với độ lệch chuẩn giữa các seed; theo template và `RUBRIC.md:37`, ghi “chưa chạy” rồi bỏ qua phần còn lại của mục này (không bịa số liệu, `RULES.md:22`).
+**Đã train.** Bảng dưới lấy nguyên từ `submission/results/comparison.md`, được sinh bởi `python scripts/summarize_results.py` từ 4 file `*_seed*.json` của `scripts/train_compare.py`.
+
+| biến thể | #ảnh train | số seed | map50 (TB ± độ lệch) | map50_95 (TB ± độ lệch) | precision (TB ± độ lệch) | recall (TB ± độ lệch) |
+|---|---|---|---|---|---|---|
+| raw | 224 | 2 | 0.726 ± 0.000 | 0.512 ± 0.004 | 0.764 ± 0.061 | 0.649 ± 0.028 |
+| clean | 193 | 2 | 0.730 ± 0.008 | 0.506 ± 0.007 | 0.793 ± 0.071 | 0.615 ± 0.046 |
+
+Cấu hình: `yolo26n.pt`, 20 epoch, batch 16, `imgsz = 640`, GPU T4, seed `0` và `1`; cùng validation `data/gold_val` (40 ảnh) và test `data/test` (100 ảnh). `manifest_sha1 = 10ab17a7…` trong 2 file `clean_seed*.json` khớp normalized SHA1 của `submission/export/clean_v1/manifest.json`, và `config_sha1 = de46d0f2…` khớp `configs/pipeline.yaml` → train đúng dataset đã export ở mục 1.
+
+**So với nhiễu và kết luận:** `ΔmAP50 = clean − raw = +0.005`. Độ lệch chuẩn giữa 2 seed là `0.0076` (clean) và `0.0002` (raw); lấy độ lệch lớn hơn làm thước đo nhiễu thì `+0.005 < 0.0076` → chênh lệch **nằm trong nhiễu**, **chưa kết luận được clean tốt hơn raw**. `mAP50-95` còn thấp hơn ở clean (`0.5064` so với `0.5117`, Δ = `−0.0053`); precision và recall cũng dao động mạnh giữa seed (`±0.071`, `±0.046`). Với 2 seed và tập test 100 ảnh, kết quả chỉ đủ nói “không thấy khác biệt có ý nghĩa”.
+
+**Giả thuyết và cách kiểm:**
+1. `raw` chứa 11 ảnh `LEAK_TEST` và 15 ảnh trùng (`DUP_IMAGE_EXACT` 8, `DUP_IMAGE_NEAR` 7) có thể làm điểm raw bị thổi phồng. Kiểm: đối chiếu danh sách ảnh trong `01_intake.csv` với tên file `data/test/images/`, rồi train lại biến thể raw sau khi loại các ảnh đó (không dùng nhãn test để tune).
+2. `clean` vẫn có nhãn máy sót và `second_opinion` không chạy vì thiếu `preds` (mục 3), nên “sạch” chưa đầy đủ. Kiểm: chạy thêm biến thể `auto` (không người duyệt) và `oracle` (nhãn người), rồi so AP50 theo từng lớp như ô 8 của notebook; nếu `oracle` vượt hẳn thì phần còn lại là do chất lượng nhãn.
+3. Test chỉ 100 ảnh và mới 2 seed → sai số lấy mẫu lớn. Kiểm: tăng lên ≥5 seed, bootstrap khoảng tin cậy cho Δ trên 100 ảnh rồi so với độ lệch chuẩn gộp; nếu khoảng chứa 0 thì giữ kết luận “chưa kết luận được”.
+4. Ultralytics tự bỏ ảnh/nhãn hỏng của `raw` dù `train_images = 224` chỉ đếm theo số file đã copy. Kiểm: đọc cảnh báo in ra ở bước train và đối chiếu với số ảnh thực được train trong log của `work/train/runs/raw_seed*/`.
 
 ## 6. Quyết định và ghi chú AI
 **(a) Quyết định cuối: Release.** Điều kiện giữ quyết định này: `n_errors = 0`, 52/52 ảnh hàng đợi đã duyệt, warn chưa duyệt `0% < 10%` và export `clean_v1` tồn tại. Nếu xuất hiện lại error bắt buộc (ví dụ 6 ảnh thiếu nhãn chưa được gán) → **Rework**; nếu warn chưa duyệt chiếm ≥ 10% → **Hold**. Để chuyển Hold/Rework về Release: gán nhãn đủ 6 ảnh, duyệt hết ảnh còn warn trong ngân sách 80, nối `preds` vào checker, sửa alias đọc ngưỡng, rồi chạy lại gate và export.
