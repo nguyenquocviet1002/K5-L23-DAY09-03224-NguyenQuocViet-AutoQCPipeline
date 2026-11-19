@@ -1,0 +1,100 @@
+check,severity,code,image,line,message,extra
+images,error,CORRUPT_IMAGE,img_0010,,không mở được: UnidentifiedImageError,
+images,error,BAD_SIZE,img_0107,,cạnh ngắn 180px < 250px,"{""size"": [240, 180]}"
+images,error,BAD_SIZE,img_0113,,cạnh ngắn 226px < 250px,"{""size"": [240, 226]}"
+images,error,BAD_SIZE,img_0122,,cạnh ngắn 180px < 250px,"{""size"": [240, 180]}"
+images,error,CORRUPT_IMAGE,img_0136,,không mở được: OSError,
+duplicates,error,DUP_IMAGE_NEAR,img_0011,,trùng gần đúng với img_0008 (phash 16),"{""of"": ""img_0008"", ""dist"": 16}"
+duplicates,error,LEAK_TEST,img_0013,,trùng ảnh kho test/val: test/test_087.jpg,"{""of"": ""test/test_087.jpg""}"
+duplicates,error,LEAK_TEST,img_0017,,trùng ảnh kho test/val: test/test_071.jpg,"{""of"": ""test/test_071.jpg""}"
+duplicates,error,LEAK_TEST,img_0021,,trùng ảnh kho test/val: test/test_048.jpg,"{""of"": ""test/test_048.jpg""}"
+duplicates,error,LEAK_TEST,img_0033,,trùng ảnh kho test/val: test/test_070.jpg,"{""of"": ""test/test_070.jpg""}"
+duplicates,error,LEAK_TEST,img_0038,,trùng ảnh kho test/val: test/test_002.jpg,"{""of"": ""test/test_002.jpg""}"
+duplicates,error,DUP_IMAGE_EXACT,img_0039,,trùng từng byte với img_0012,"{""of"": ""img_0012""}"
+duplicates,error,LEAK_TEST,img_0049,,trùng ảnh kho test/val: test/test_033.jpg,"{""of"": ""test/test_033.jpg""}"
+duplicates,error,DUP_IMAGE_NEAR,img_0076,,trùng gần đúng với img_0042 (phash 0),"{""of"": ""img_0042"", ""dist"": 0}"
+duplicates,error,DUP_IMAGE_EXACT,img_0080,,trùng từng byte với img_0071,"{""of"": ""img_0071""}"
+duplicates,error,DUP_IMAGE_NEAR,img_0084,,trùng gần đúng với img_0074 (phash 16),"{""of"": ""img_0074"", ""dist"": 16}"
+duplicates,error,LEAK_TEST,img_0101,,trùng ảnh kho test/val: test/test_039.jpg,"{""of"": ""test/test_039.jpg""}"
+duplicates,error,DUP_IMAGE_EXACT,img_0102,,trùng từng byte với img_0082,"{""of"": ""img_0082""}"
+duplicates,error,LEAK_TEST,img_0115,,trùng ảnh kho test/val: test/test_088.jpg,"{""of"": ""test/test_088.jpg""}"
+duplicates,error,DUP_IMAGE_NEAR,img_0143,,trùng gần đúng với img_0037 (phash 0),"{""of"": ""img_0037"", ""dist"": 0}"
+duplicates,error,DUP_IMAGE_EXACT,img_0156,,trùng từng byte với img_0147,"{""of"": ""img_0147""}"
+duplicates,error,DUP_IMAGE_EXACT,img_0162,,trùng từng byte với img_0054,"{""of"": ""img_0054""}"
+duplicates,error,LEAK_TEST,img_0167,,trùng ảnh kho test/val: test/test_044.jpg,"{""of"": ""test/test_044.jpg""}"
+duplicates,error,LEAK_TEST,img_0174,,trùng ảnh kho test/val: test/test_085.jpg,"{""of"": ""test/test_085.jpg""}"
+duplicates,error,DUP_IMAGE_NEAR,img_0177,,trùng gần đúng với img_0113 (phash 16),"{""of"": ""img_0113"", ""dist"": 16}"
+duplicates,error,DUP_IMAGE_NEAR,img_0186,,trùng gần đúng với img_0061 (phash 10),"{""of"": ""img_0061"", ""dist"": 10}"
+duplicates,error,DUP_IMAGE_EXACT,img_0203,,trùng từng byte với img_0145,"{""of"": ""img_0145""}"
+duplicates,error,DUP_IMAGE_EXACT,img_0207,,trùng từng byte với img_0182,"{""of"": ""img_0182""}"
+duplicates,error,LEAK_TEST,img_0221,,trùng ảnh kho test/val: test/test_009.jpg,"{""of"": ""test/test_009.jpg""}"
+duplicates,error,DUP_IMAGE_EXACT,img_0222,,trùng từng byte với img_0151,"{""of"": ""img_0151""}"
+duplicates,error,DUP_IMAGE_NEAR,img_0223,,trùng gần đúng với img_0077 (phash 6),"{""of"": ""img_0077"", ""dist"": 6}"
+missing_labels,error,MISSING_LABEL_FILE,img_0031,,ảnh không có file nhãn,
+missing_labels,error,MISSING_LABEL_FILE,img_0053,,ảnh không có file nhãn,
+missing_labels,error,MISSING_LABEL_FILE,img_0126,,ảnh không có file nhãn,
+missing_labels,error,MISSING_LABEL_FILE,img_0135,,ảnh không có file nhãn,
+missing_labels,error,MISSING_LABEL_FILE,img_0170,,ảnh không có file nhãn,
+missing_labels,error,MISSING_LABEL_FILE,img_0219,,ảnh không có file nhãn,
+missing_labels,warn,EMPTY_LABEL,img_0004,,file nhãn rỗng: ảnh nền hay thiếu nhãn?,
+missing_labels,warn,EMPTY_LABEL,img_0057,,file nhãn rỗng: ảnh nền hay thiếu nhãn?,
+missing_labels,warn,EMPTY_LABEL,img_0065,,file nhãn rỗng: ảnh nền hay thiếu nhãn?,
+missing_labels,warn,EMPTY_LABEL,img_0097,,file nhãn rỗng: ảnh nền hay thiếu nhãn?,
+missing_labels,warn,EMPTY_LABEL,img_0103,,file nhãn rỗng: ảnh nền hay thiếu nhãn?,
+missing_labels,warn,EMPTY_LABEL,img_0129,,file nhãn rỗng: ảnh nền hay thiếu nhãn?,
+missing_labels,warn,EMPTY_LABEL,img_0147,,file nhãn rỗng: ảnh nền hay thiếu nhãn?,
+missing_labels,warn,EMPTY_LABEL,img_0157,,file nhãn rỗng: ảnh nền hay thiếu nhãn?,
+missing_labels,warn,EMPTY_LABEL,img_0178,,file nhãn rỗng: ảnh nền hay thiếu nhãn?,
+missing_labels,warn,EMPTY_LABEL,img_0184,,file nhãn rỗng: ảnh nền hay thiếu nhãn?,
+missing_labels,warn,EMPTY_LABEL,img_0192,,file nhãn rỗng: ảnh nền hay thiếu nhãn?,
+label_format,warn,DUP_BOX,img_0001,3,duplicate of class-1 box on earlier line,
+label_format,warn,DUP_BOX,img_0006,2,duplicate of class-1 box on earlier line,
+label_format,error,BAD_FORMAT,img_0014,1,cannot parse: '1 0.131568 0.075191 0.262343 nan',
+label_format,warn,BOX_HUGE,img_0018,1,area=0.9705 >= 0.9,
+label_format,error,BAD_CLASS_ID,img_0020,3,"class 93 not in [0,3]","{""class_id"": 93}"
+label_format,error,BAD_FORMAT,img_0022,1,cannot parse: '0 0.070102 0.969241 0.139901 nan',
+label_format,warn,DUP_BOX,img_0024,8,duplicate of class-2 box on earlier line,
+label_format,warn,BOX_TINY,img_0026,6,short side 11.41px < 12.0px,"{""side_px"": 11.407912}"
+label_format,warn,BOX_OUT_OF_IMAGE,img_0030,9,overflow=0.022998 > tol=0.001,"{""overflow"": 0.022998}"
+label_format,error,MISSING_LABEL,img_0031,,missing label file: img_0031.txt,
+label_format,warn,BOX_OUT_OF_IMAGE,img_0043,1,overflow=0.030000 > tol=0.001,"{""overflow"": 0.030000000000000027}"
+label_format,error,BOX_ZERO,img_0050,1,"w=0.0, h=0.396065 must be > 0",
+label_format,warn,BOX_TINY,img_0051,5,short side 8.91px < 12.0px,"{""side_px"": 8.90592}"
+label_format,error,MISSING_LABEL,img_0053,,missing label file: img_0053.txt,
+label_format,error,BOX_ZERO,img_0066,3,"w=0.076818, h=0.0 must be > 0",
+label_format,warn,BOX_TINY,img_0069,2,short side 11.22px < 12.0px,"{""side_px"": 11.21536}"
+label_format,warn,BOX_OUT_OF_IMAGE,img_0078,2,overflow=0.030000 > tol=0.001,"{""overflow"": 0.030000000000000027}"
+label_format,warn,BOX_OUT_OF_IMAGE,img_0087,1,overflow=0.060000 > tol=0.001,"{""overflow"": 0.06000000000000005}"
+label_format,warn,BOX_HUGE,img_0087,1,area=0.9014 >= 0.9,
+label_format,error,BOX_ZERO,img_0092,2,"w=0.0, h=0.090633 must be > 0",
+label_format,warn,DUP_BOX,img_0094,13,duplicate of class-1 box on earlier line,
+label_format,error,BAD_CLASS_ID,img_0099,2,"class -1 not in [0,3]","{""class_id"": -1}"
+label_format,error,BAD_CLASS_ID,img_0104,1,"class 7 not in [0,3]","{""class_id"": 7}"
+label_format,warn,BOX_OUT_OF_IMAGE,img_0108,1,overflow=0.030000 > tol=0.001,"{""overflow"": 0.03}"
+label_format,warn,DUP_BOX,img_0109,2,duplicate of class-1 box on earlier line,
+label_format,error,BAD_CLASS_ID,img_0117,12,"class -1 not in [0,3]","{""class_id"": -1}"
+label_format,error,MISSING_LABEL,img_0126,,missing label file: img_0126.txt,
+label_format,warn,BOX_HUGE,img_0128,1,area=0.9884 >= 0.9,
+label_format,error,MISSING_LABEL,img_0135,,missing label file: img_0135.txt,
+label_format,warn,DUP_BOX,img_0141,2,duplicate of class-1 box on earlier line,
+label_format,warn,BOX_OUT_OF_IMAGE,img_0144,1,overflow=0.060001 > tol=0.001,"{""overflow"": 0.06000050000000012}"
+label_format,warn,BOX_OUT_OF_IMAGE,img_0152,1,overflow=0.030001 > tol=0.001,"{""overflow"": 0.030000500000000097}"
+label_format,warn,BOX_TINY,img_0161,2,short side 10.26px < 12.0px,"{""side_px"": 10.25904}"
+label_format,warn,BOX_TINY,img_0161,3,short side 11.40px < 12.0px,"{""side_px"": 11.3952}"
+label_format,warn,BOX_TINY,img_0161,4,short side 11.87px < 12.0px,"{""side_px"": 11.86608}"
+label_format,error,MISSING_LABEL,img_0170,,missing label file: img_0170.txt,
+label_format,error,BAD_FORMAT,img_0179,1,cannot parse: '1 0.504931 0.596629 0.267039',
+label_format,error,BOX_ZERO,img_0185,10,"w=0.154531, h=0.0 must be > 0",
+label_format,warn,BOX_OUT_OF_IMAGE,img_0193,7,overflow=0.001826 > tol=0.001,"{""overflow"": 0.0018255000000000042}"
+label_format,warn,DUP_BOX,img_0193,7,duplicate of class-0 box on earlier line,
+label_format,error,BAD_CLASS_ID,img_0194,1,"class 4 not in [0,3]","{""class_id"": 4}"
+label_format,warn,BOX_HUGE,img_0196,1,area=0.9842 >= 0.9,
+label_format,error,BAD_CLASS_ID,img_0199,7,"class 4 not in [0,3]","{""class_id"": 4}"
+label_format,warn,BOX_OUT_OF_IMAGE,img_0204,1,overflow=0.060000 > tol=0.001,"{""overflow"": 0.06}"
+label_format,error,MISSING_LABEL,img_0219,,missing label file: img_0219.txt,
+class_names,error,BAD_CLASS_NAME,data.yaml,,tên lớp lạ: 'Person' (id 1),"{""id"": 1, ""name"": ""Person""}"
+class_names,error,BAD_CLASS_NAME,data.yaml,,tên lớp lạ: 'Bus' (id 3),"{""id"": 3, ""name"": ""Bus""}"
+stats,warn,CLASS_RARE,<dataset>,,lớp -1 chỉ có 2 box,"{""class"": ""-1"", ""n"": 2}"
+stats,warn,CLASS_RARE,<dataset>,,lớp 4 chỉ có 2 box,"{""class"": ""4"", ""n"": 2}"
+stats,warn,CLASS_RARE,<dataset>,,lớp 7 chỉ có 1 box,"{""class"": ""7"", ""n"": 1}"
+stats,warn,CLASS_RARE,<dataset>,,lớp 93 chỉ có 1 box,"{""class"": ""93"", ""n"": 1}"

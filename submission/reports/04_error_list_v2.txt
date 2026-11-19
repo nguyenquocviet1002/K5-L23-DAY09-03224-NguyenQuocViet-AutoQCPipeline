@@ -1,0 +1,67 @@
+# Danh sách lỗi — SAU sửa tự động (v2)
+ảnh đã quét: 193
+
+label_format -> 32 dòng
+missing_labels -> 20 dòng
+
+[ERROR] MISSING_LABEL        img_0031  missing label file: img_0031.txt
+[ERROR] MISSING_LABEL        img_0053  missing label file: img_0053.txt
+[ERROR] MISSING_LABEL        img_0126  missing label file: img_0126.txt
+[ERROR] MISSING_LABEL        img_0135  missing label file: img_0135.txt
+[ERROR] MISSING_LABEL        img_0170  missing label file: img_0170.txt
+[ERROR] MISSING_LABEL        img_0219  missing label file: img_0219.txt
+[ERROR] MISSING_LABEL_FILE   img_0031  ảnh không có file nhãn
+[ERROR] MISSING_LABEL_FILE   img_0053  ảnh không có file nhãn
+[ERROR] MISSING_LABEL_FILE   img_0126  ảnh không có file nhãn
+[ERROR] MISSING_LABEL_FILE   img_0135  ảnh không có file nhãn
+[ERROR] MISSING_LABEL_FILE   img_0170  ảnh không có file nhãn
+[ERROR] MISSING_LABEL_FILE   img_0219  ảnh không có file nhãn
+[WARN ] BOX_HUGE             img_0018.txt:1  area=0.9705 >= 0.9
+[WARN ] BOX_HUGE             img_0087.txt:1  area=0.9014 >= 0.9
+[WARN ] BOX_HUGE             img_0128.txt:1  area=0.9884 >= 0.9
+[WARN ] BOX_HUGE             img_0196.txt:1  area=0.9842 >= 0.9
+[WARN ] BOX_OUT_OF_IMAGE     img_0030.txt:9  overflow=0.022998 > tol=0.001
+[WARN ] BOX_OUT_OF_IMAGE     img_0043.txt:1  overflow=0.030000 > tol=0.001
+[WARN ] BOX_OUT_OF_IMAGE     img_0078.txt:2  overflow=0.030000 > tol=0.001
+[WARN ] BOX_OUT_OF_IMAGE     img_0087.txt:1  overflow=0.060000 > tol=0.001
+[WARN ] BOX_OUT_OF_IMAGE     img_0108.txt:1  overflow=0.030000 > tol=0.001
+[WARN ] BOX_OUT_OF_IMAGE     img_0144.txt:1  overflow=0.060001 > tol=0.001
+[WARN ] BOX_OUT_OF_IMAGE     img_0152.txt:1  overflow=0.030001 > tol=0.001
+[WARN ] BOX_OUT_OF_IMAGE     img_0193.txt:7  overflow=0.001826 > tol=0.001
+[WARN ] BOX_OUT_OF_IMAGE     img_0204.txt:1  overflow=0.060000 > tol=0.001
+[WARN ] BOX_TINY             img_0026.txt:6  short side 11.41px < 12.0px
+[WARN ] BOX_TINY             img_0051.txt:5  short side 8.91px < 12.0px
+[WARN ] BOX_TINY             img_0069.txt:2  short side 11.22px < 12.0px
+[WARN ] BOX_TINY             img_0161.txt:2  short side 10.26px < 12.0px
+[WARN ] BOX_TINY             img_0161.txt:3  short side 11.40px < 12.0px
+[WARN ] BOX_TINY             img_0161.txt:4  short side 11.87px < 12.0px
+[WARN ] DUP_BOX              img_0001.txt:3  duplicate of class-1 box on earlier line
+[WARN ] DUP_BOX              img_0006.txt:2  duplicate of class-1 box on earlier line
+[WARN ] DUP_BOX              img_0024.txt:8  duplicate of class-2 box on earlier line
+[WARN ] DUP_BOX              img_0094.txt:13  duplicate of class-1 box on earlier line
+[WARN ] DUP_BOX              img_0109.txt:2  duplicate of class-1 box on earlier line
+[WARN ] DUP_BOX              img_0141.txt:2  duplicate of class-1 box on earlier line
+[WARN ] DUP_BOX              img_0193.txt:7  duplicate of class-0 box on earlier line
+[WARN ] EMPTY_LABEL          img_0004  file nhãn rỗng: ảnh nền hay thiếu nhãn?
+[WARN ] EMPTY_LABEL          img_0050  file nhãn rỗng: ảnh nền hay thiếu nhãn?
+[WARN ] EMPTY_LABEL          img_0057  file nhãn rỗng: ảnh nền hay thiếu nhãn?
+[WARN ] EMPTY_LABEL          img_0065  file nhãn rỗng: ảnh nền hay thiếu nhãn?
+[WARN ] EMPTY_LABEL          img_0097  file nhãn rỗng: ảnh nền hay thiếu nhãn?
+[WARN ] EMPTY_LABEL          img_0103  file nhãn rỗng: ảnh nền hay thiếu nhãn?
+[WARN ] EMPTY_LABEL          img_0104  file nhãn rỗng: ảnh nền hay thiếu nhãn?
+[WARN ] EMPTY_LABEL          img_0129  file nhãn rỗng: ảnh nền hay thiếu nhãn?
+[WARN ] EMPTY_LABEL          img_0147  file nhãn rỗng: ảnh nền hay thiếu nhãn?
+[WARN ] EMPTY_LABEL          img_0157  file nhãn rỗng: ảnh nền hay thiếu nhãn?
+[WARN ] EMPTY_LABEL          img_0178  file nhãn rỗng: ảnh nền hay thiếu nhãn?
+[WARN ] EMPTY_LABEL          img_0184  file nhãn rỗng: ảnh nền hay thiếu nhãn?
+[WARN ] EMPTY_LABEL          img_0192  file nhãn rỗng: ảnh nền hay thiếu nhãn?
+[WARN ] EMPTY_LABEL          img_0194  file nhãn rỗng: ảnh nền hay thiếu nhãn?
+
+## Tổng hợp theo mã
+error MISSING_LABEL          6
+error MISSING_LABEL_FILE     6
+warn  BOX_HUGE               4
+warn  BOX_OUT_OF_IMAGE       9
+warn  BOX_TINY               6
+warn  DUP_BOX                7
+warn  EMPTY_LABEL            14

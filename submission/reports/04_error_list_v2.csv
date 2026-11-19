@@ -1,0 +1,53 @@
+check,severity,code,image,line,message,extra
+missing_labels,error,MISSING_LABEL_FILE,img_0031,,ảnh không có file nhãn,
+missing_labels,error,MISSING_LABEL_FILE,img_0053,,ảnh không có file nhãn,
+missing_labels,error,MISSING_LABEL_FILE,img_0126,,ảnh không có file nhãn,
+missing_labels,error,MISSING_LABEL_FILE,img_0135,,ảnh không có file nhãn,
+missing_labels,error,MISSING_LABEL_FILE,img_0170,,ảnh không có file nhãn,
+missing_labels,error,MISSING_LABEL_FILE,img_0219,,ảnh không có file nhãn,
+missing_labels,warn,EMPTY_LABEL,img_0004,,file nhãn rỗng: ảnh nền hay thiếu nhãn?,
+missing_labels,warn,EMPTY_LABEL,img_0050,,file nhãn rỗng: ảnh nền hay thiếu nhãn?,
+missing_labels,warn,EMPTY_LABEL,img_0057,,file nhãn rỗng: ảnh nền hay thiếu nhãn?,
+missing_labels,warn,EMPTY_LABEL,img_0065,,file nhãn rỗng: ảnh nền hay thiếu nhãn?,
+missing_labels,warn,EMPTY_LABEL,img_0097,,file nhãn rỗng: ảnh nền hay thiếu nhãn?,
+missing_labels,warn,EMPTY_LABEL,img_0103,,file nhãn rỗng: ảnh nền hay thiếu nhãn?,
+missing_labels,warn,EMPTY_LABEL,img_0104,,file nhãn rỗng: ảnh nền hay thiếu nhãn?,
+missing_labels,warn,EMPTY_LABEL,img_0129,,file nhãn rỗng: ảnh nền hay thiếu nhãn?,
+missing_labels,warn,EMPTY_LABEL,img_0147,,file nhãn rỗng: ảnh nền hay thiếu nhãn?,
+missing_labels,warn,EMPTY_LABEL,img_0157,,file nhãn rỗng: ảnh nền hay thiếu nhãn?,
+missing_labels,warn,EMPTY_LABEL,img_0178,,file nhãn rỗng: ảnh nền hay thiếu nhãn?,
+missing_labels,warn,EMPTY_LABEL,img_0184,,file nhãn rỗng: ảnh nền hay thiếu nhãn?,
+missing_labels,warn,EMPTY_LABEL,img_0192,,file nhãn rỗng: ảnh nền hay thiếu nhãn?,
+missing_labels,warn,EMPTY_LABEL,img_0194,,file nhãn rỗng: ảnh nền hay thiếu nhãn?,
+label_format,warn,DUP_BOX,img_0001,3,duplicate of class-1 box on earlier line,
+label_format,warn,DUP_BOX,img_0006,2,duplicate of class-1 box on earlier line,
+label_format,warn,BOX_HUGE,img_0018,1,area=0.9705 >= 0.9,
+label_format,warn,DUP_BOX,img_0024,8,duplicate of class-2 box on earlier line,
+label_format,warn,BOX_TINY,img_0026,6,short side 11.41px < 12.0px,"{""side_px"": 11.407912}"
+label_format,warn,BOX_OUT_OF_IMAGE,img_0030,9,overflow=0.022998 > tol=0.001,"{""overflow"": 0.022998}"
+label_format,error,MISSING_LABEL,img_0031,,missing label file: img_0031.txt,
+label_format,warn,BOX_OUT_OF_IMAGE,img_0043,1,overflow=0.030000 > tol=0.001,"{""overflow"": 0.030000000000000027}"
+label_format,warn,BOX_TINY,img_0051,5,short side 8.91px < 12.0px,"{""side_px"": 8.90592}"
+label_format,error,MISSING_LABEL,img_0053,,missing label file: img_0053.txt,
+label_format,warn,BOX_TINY,img_0069,2,short side 11.22px < 12.0px,"{""side_px"": 11.21536}"
+label_format,warn,BOX_OUT_OF_IMAGE,img_0078,2,overflow=0.030000 > tol=0.001,"{""overflow"": 0.030000000000000027}"
+label_format,warn,BOX_OUT_OF_IMAGE,img_0087,1,overflow=0.060000 > tol=0.001,"{""overflow"": 0.06000000000000005}"
+label_format,warn,BOX_HUGE,img_0087,1,area=0.9014 >= 0.9,
+label_format,warn,DUP_BOX,img_0094,13,duplicate of class-1 box on earlier line,
+label_format,warn,BOX_OUT_OF_IMAGE,img_0108,1,overflow=0.030000 > tol=0.001,"{""overflow"": 0.03}"
+label_format,warn,DUP_BOX,img_0109,2,duplicate of class-1 box on earlier line,
+label_format,error,MISSING_LABEL,img_0126,,missing label file: img_0126.txt,
+label_format,warn,BOX_HUGE,img_0128,1,area=0.9884 >= 0.9,
+label_format,error,MISSING_LABEL,img_0135,,missing label file: img_0135.txt,
+label_format,warn,DUP_BOX,img_0141,2,duplicate of class-1 box on earlier line,
+label_format,warn,BOX_OUT_OF_IMAGE,img_0144,1,overflow=0.060001 > tol=0.001,"{""overflow"": 0.06000050000000012}"
+label_format,warn,BOX_OUT_OF_IMAGE,img_0152,1,overflow=0.030001 > tol=0.001,"{""overflow"": 0.030000500000000097}"
+label_format,warn,BOX_TINY,img_0161,2,short side 10.26px < 12.0px,"{""side_px"": 10.25904}"
+label_format,warn,BOX_TINY,img_0161,3,short side 11.40px < 12.0px,"{""side_px"": 11.3952}"
+label_format,warn,BOX_TINY,img_0161,4,short side 11.87px < 12.0px,"{""side_px"": 11.86608}"
+label_format,error,MISSING_LABEL,img_0170,,missing label file: img_0170.txt,
+label_format,warn,BOX_OUT_OF_IMAGE,img_0193,7,overflow=0.001826 > tol=0.001,"{""overflow"": 0.0018255000000000042}"
+label_format,warn,DUP_BOX,img_0193,7,duplicate of class-0 box on earlier line,
+label_format,warn,BOX_HUGE,img_0196,1,area=0.9842 >= 0.9,
+label_format,warn,BOX_OUT_OF_IMAGE,img_0204,1,overflow=0.060000 > tol=0.001,"{""overflow"": 0.06}"
+label_format,error,MISSING_LABEL,img_0219,,missing label file: img_0219.txt,

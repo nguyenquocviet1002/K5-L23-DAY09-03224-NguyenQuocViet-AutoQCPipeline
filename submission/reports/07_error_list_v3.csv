@@ -1,0 +1,3 @@
+check,severity,code,image,line,message,extra
+label_format,warn,BOX_HUGE,img_0128,1,area=0.9820 >= 0.9,
+label_format,warn,BOX_HUGE,img_0196,1,area=0.9575 >= 0.9,

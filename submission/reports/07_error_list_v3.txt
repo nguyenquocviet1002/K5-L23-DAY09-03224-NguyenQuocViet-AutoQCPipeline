@@ -1,0 +1,12 @@
+# Danh sách lỗi — SAU người duyệt (v3)
+ảnh đã quét: 193
+
+label_format -> 2 dòng
+
+[WARN ] BOX_HUGE             img_0128.txt:1  area=0.9820 >= 0.9
+[WARN ] BOX_HUGE             img_0196.txt:1  area=0.9575 >= 0.9
+
+## Tổng hợp theo mã
+warn  BOX_HUGE               2
+
+Kết luận: RELEASE — không có cảnh báo warn chưa duyệt

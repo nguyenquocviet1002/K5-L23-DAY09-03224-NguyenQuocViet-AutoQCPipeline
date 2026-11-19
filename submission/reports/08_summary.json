@@ -1,0 +1,21 @@
+{
+  "verdict": {
+    "decision": "Release",
+    "n_errors": 0,
+    "error_images": [],
+    "n_warn_images": 0,
+    "warn_images": [],
+    "n_images": 193,
+    "warn_ratio": 0.0,
+    "threshold": 0.1,
+    "reasons": [
+      "không có cảnh báo warn chưa duyệt"
+    ]
+  },
+  "reviewed": 52,
+  "budget": 80,
+  "seconds": 13.7,
+  "exported": "D:\\K5-L23-DAY09-03224-NguyenQuocViet-AutoQCPipeline\\submission\\export\\clean_v1",
+  "config_sha1": "de46d0f216ac48382cc45ac13dbb492088d3ba46",
+  "review_sim_sha1": "7988ca22827f780a7043a2300490e679a1697154"
+}
